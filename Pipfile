@@ -9,6 +9,7 @@ verify_ssl = true
 django = "==2.2.2"
 djangorestframework = "*"
 django-rest-swagger = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.7"
