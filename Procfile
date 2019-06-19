@@ -1,1 +1,1 @@
-web: gunicorn MyEvents.wsgi --log-file -
+web: gunicorn DjangoConference.wsgi --log-file -
