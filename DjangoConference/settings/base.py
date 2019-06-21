@@ -30,6 +30,7 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_swagger',
+    'import_export',
 ]
 
 PROJECT_APPS = [
