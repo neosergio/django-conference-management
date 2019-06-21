@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 class Country(models.Model):
     name = models.CharField(max_length=50)
 
+    class Meta(object):
+        verbose_name_plural = 'countries'
+
     def __str__(self):
         return self.name
 
@@ -35,6 +38,8 @@ class Conference(models.Model):
     description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField()
+    is_valid = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
