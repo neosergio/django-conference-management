@@ -1,11 +1,17 @@
+"""
+Environment common functions.
+
+Created by Sergio Infante.
+"""
+
 from os import environ
 
 
-def env(e, d):
+def env(variable, default_value):
     '''
-    Function to get environment variables value if they exist.
+    Return a value from environments variables, if not exists returns default_value
     '''
-    if e in environ:
-        return environ[e]
+    if variable in environ:
+        return environ[variable]
     else:
-        return d
+        return default_value
